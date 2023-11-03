@@ -10,10 +10,10 @@ on city.country_id = country.country_id
 where country.country = 'United States' ;
 
 -- 3. Lấy ra các địa chỉ của thành phố Hanoi
-select city.city , country.country
-from city inner join country
-on city.country_id = country.country_id
-where country.country = 'VietNam';
+select address.address , address.address2, city.city
+from address inner join city
+on address.city_id = city.city_id
+where city.city = 'Hanoi';
 
 -- 4. Lấy ra tên, mô tả, tên category của các bộ phim có rating = R
 select film.title, film.description , category.name
